@@ -1,0 +1,101 @@
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="https://www.gravatar.com/avatar/<%- md5(userInfo.meta.email).toString() %>" class="img-circle" alt="<%= userInfo.name %>">
+            </div>
+            <div class="pull-left info">
+                <p><strong><%= func.toTitleCase(userInfo.username) %></strong></p>
+                <p>Credits: <a href="#"><i class="fa fa-inr" aria-hidden="true"></i> <%= req.user.credits.toFixed(0) %></a></p>
+            </div>
+        </div>
+        <!-- /.search form -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i> <span> Referral</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/clientarea/referral"><i class="fa fa-circle-o"></i> Referrals</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-random" aria-hidden="true"></i> <span> Networking</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/clientarea/referral"><i class="fa fa-circle-o"></i> Direct Joining</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i> <span> Widthdrael</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/clientarea/withdrawal"><i class="fa fa-circle-o"></i> Withdrawal</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-life-ring" aria-hidden="true"></i> <span> Support Tickets</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/clientarea/tickets"><i class="fa fa-life-ring" aria-hidden="true"></i> Support Ticket</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<div class="content-wrapper">
+    <main class="content-header">
+
+        <% if (messages.success) { %>
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i> Success!</h4>
+            <%- messages.success %>
+        </div>
+        <% } %>
+        <% if (messages.info) { %>
+        <div class="alert alert-info alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-info"></i> Info!</h4>
+            <%- messages.info %>
+        </div>
+        <% } %>
+        <% if (messages.warning) { %>
+        <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-warning"></i> Warning!</h4>
+            <%- messages.warning %>
+        </div>
+        <% } %>
+        <% if (messages.error) { %>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-ban"></i> Error!</h4>
+            <%- messages.error %>
+        </div>
+        <% } %>

@@ -27,15 +27,16 @@ router.get('/', middlewares.ifLoggedIn, middlewares.ifAdmin, function (req, res)
 router.post('/', middlewares.ifLoggedIn, middlewares.ifAdmin, function (req, res) {
     userDB.findById(req.body.user, function (err, user) {
         func.makeTxn(user, {
-            ammount: parseInt(req.body.ammount),
+            ammount: parseInt(req.body.amount),
             reason: req.body.reason,
             status: "SUCCEED",
         }, true, function (err, txnId) {
             if (err) {
-                req.flash('error', "Somthing Is Wents Wrong!");
+                console.log(err);
+                req.flash('error', "Something Is Wants Wrong!");
                 res.redirect('back')
             } else {
-                req.flash('success', "Recharge Done!")
+                req.flash('success', "Recharge Done!");
                 res.redirect('back')
             }
         })

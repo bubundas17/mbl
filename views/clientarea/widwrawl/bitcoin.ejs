@@ -1,0 +1,28 @@
+<% include ../../inc/usercpHead.ejs %>
+<% include ../../inc/usercpsider.ejs %>
+
+<div class="list-group">
+    <div class="list-group-item active">
+        <h5>withdrawal Via BitCoin Wallet</h5>
+    </div>
+    <div class="list-group-item">
+        <p>Here you can withdrawal your Tkc4you.com credits.</p>
+        <p class="info"><strong>Note: Please fill the Withdrawal form carefully, it can't be undone
+                later!</strong></p>
+    </div>
+    <form action="/clientarea/withdrawal/bitcoin" method="post" class="form-group">
+        <div class="list-group-item">
+            <strong for="TKC Address">Your Wallet Address: <%= userInfo.bitcoin %></strong>
+            <p>NOTE: To Change your Bitcoin Wallet Address, Please Go To Your profile and change it.</p>
+        </div>
+        <div class="list-group-item">
+            <span>Enter Amount (1000 INR MIN.)</span>
+            <input type="number" name="amount" value="1000" placeholder="Amount">
+            <small>Note: BitCoins Will be credited according to current BitCoin exchenge rates.</small>
+        </div>
+        <div class="list-group-item">
+            <input type="submit" class="btn btn-success" value="Submit!" id="rech">
+        </div>
+    </form>
+</div>
+<% include ../../inc/footer %>

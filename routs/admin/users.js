@@ -86,7 +86,7 @@ router.get('/:id/active', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, res
 });
 
 router.post('/:id/active', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     userDB.findById(req.params.id)
         .then(user => {
             if(req.body.status === "active"){

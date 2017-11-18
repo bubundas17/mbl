@@ -1,66 +1,70 @@
-const express       = require('express');
-const middlewares   = require('../../includs/middlewares');
-const func          = require('../../includs/func');
+const express = require('express');
+const middlewares = require('../../includs/middlewares');
+const func = require('../../includs/func');
 const router = express.Router();
 
 
-const sysinfoDB     = require('../../models/sysinfo');
-const widwrawlDB     = require('../../models/withdrawal');
-const rechargeDB     = require('../../models/recharge');
+const sysinfoDB = require('../../models/sysinfo');
+const widwrawlDB = require('../../models/withdrawal');
+const rechargeDB = require('../../models/recharge');
 
-// Widwrawl Paths
-router.get('/', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) => {
-    Promise.all([widwrawlDB.find({user: req.user._id}), rechargeDB.find({user: req.user._id})])
-        .then( reqs => {
+// Withdrawal Paths
+router.get('/', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    Promise.all([widwrawlDB.find({user: req.user._id, status: 1}), rechargeDB.find({user: req.user._id})])
+        .then(reqs => {
             res.locals.title = 'Withdrawal Requests ' + ' - ' + res.locals.title;
-            res.render('clientarea/widwrawl/index.ejs', {widwrawls: reqs[0], recharges: reqs[1]})
+            res.render('clientarea/widwrawl/index.ejs', {widwrawls: reqs[0], all: reqs[1]})
         })
-        .catch( err => {
+        .catch(err => {
             console.log("Cannot read Database!");
             console.log(err);
         })
 });
 
-router.get('/tkc', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) => {
-    res.locals.title = 'Widwrawl Via TKC Coin ' + ' - ' + res.locals.title;
-    res.render('clientarea/widwrawl/tkc.ejs')
+router.get('/bank', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    res.locals.title = 'Withdrawal Via Bank Transfer' + ' - ' + res.locals.title;
+    res.render('clientarea/widwrawl/bank.ejs')
 });
 
-router.post('/tkc', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) => {
+router.post('/bank', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
     let amount = req.body.amount;
-    let tkc = parseInt(amount);
-    sysinfoDB.findOne({ name: "Tkc4you" })
-        .then( info => {
-            if (tkc < 50) {
-                req.flash("error", "Amount cannot be less than 50!");
-                return res.redirect('back')
-            }
+    let bank =  req.body.bank;
+    let payee =  req.body.payee;
+    let ifsc =  req.body.ifsc;
+    let accountnumber =  req.body.accountnumber;
+    let message   = req.body.message;
 
-            if (req.user.credits > amount) {
-                req.user.credits -= amount
-                req.user.save()
-            } else {
-                req.flash("error", "You do not have enough credits in your account");
-                return res.redirect('back')
-            }
+    amount = parseInt(amount);
+    if (amount < 100) {
+        req.flash("error", "Amount cannot be less than 100!");
+        return res.redirect('back')
+    }
 
-            widwrawlDB.create({
-                user: req.user._id,
-                amount: amount,
-                tkcaddress: req.user.tkc
-            })
-                .then(data => {
-                    req.flash("success", "Cool! Your request is submitted!");
-                    res.redirect('back')
-                })
-                .catch( err => {
-                    req.flash("error", "Something is wants Wrong.");
-                    res.redirect('back');
-                    console.log("Database Update Failed!");
-                    console.log(err);
-                })
+    if (req.user.credits > amount) {
+        req.user.credits -= amount;
+        req.user.save()
+    } else {
+        req.flash("error", "You do not have enough credits in your account");
+        return res.redirect('back')
+    }
+
+    widwrawlDB.create({
+        method: 1,
+        user: req.user._id,
+        amount: amount,
+        bank: {
+            payee: payee,
+            bank: bank,
+            accountNumber: accountnumber,
+            ifsc: ifsc
+        },
+        message: message
+    })
+        .then(data => {
+            req.flash("success", "Cool! Your request is submitted!");
+            res.redirect('back')
         })
-        .catch( err => {
+        .catch(err => {
             req.flash("error", "Something is wants Wrong.");
             res.redirect('back');
             console.log("Database Update Failed!");
@@ -68,59 +72,95 @@ router.post('/tkc', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) =>
         })
 });
 
-router.get('/recharge', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) => {
-    res.locals.title = 'Widwrawl Via Mobile Recharge ' + ' - ' + res.locals.title;
-    sysinfoDB.findOne({ name: "Tkc4you" })
-        .then( info => {
+router.get('/bitcoin', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    res.locals.title = 'Withdrawal Via BitCoin ' + ' - ' + res.locals.title;
+    res.render('clientarea/widwrawl/bitcoin.ejs');
+});
+
+router.post('/bitcoin', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    let amount = req.body.amount;
+    amount = parseInt(amount);
+
+    if (amount < 1000) {
+        req.flash("error", "Amount cannot be less than 1000!");
+        return res.redirect('back')
+    }
+
+    if (req.user.credits > amount) {
+        req.user.credits -= amount;
+        req.user.save()
+    } else {
+        req.flash("error", "You do not have enough credits in your account");
+        return res.redirect('back')
+    }
+
+    widwrawlDB.create({
+        user: req.user._id,
+        amount: amount,
+        method: 4,
+        bitcoin: {
+            walletAddress: req.user.bitcoin
+        },
+        tkcaddress: req.user.bitcoin
+    })
+        .then(data => {
+            req.flash("success", "Cool! Your request is submitted!");
+            res.redirect('back')
+        })
+        .catch(err => {
+            req.flash("error", "Something is wants Wrong.");
+            res.redirect('back');
+            console.log("Database Update Failed!");
+            console.log(err);
+        })
+});
+
+router.get('/recharge', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    res.locals.title = 'Withdrawal Via Mobile Recharge ' + ' - ' + res.locals.title;
+    sysinfoDB.findOne({name: "Tkc4you"})
+        .then(info => {
             res.render('clientarea/widwrawl/recharge.ejs', {info})
         })
 
 });
 
-router.post('/recharge', middlewares.ifLoggedIn,  middlewares.ifActive, (req, res) => {
-    const operator  =   req.body.operator;
-    const state     =   req.body.state;
-    const number    =   req.body.number;
-    let amount      = req.body.amount;
-    amount          =   parseInt(amount);
-    sysinfoDB.findOne({ name: "Tkc4you" })
-        .then( info => {
-            var tckAmount = (amount * info.tkcRates);
-            console.log(tckAmount);
-            if (tckAmount < 0) {
-                req.flash("error", "Amount cannot be lessthan zero!");
-                return res.redirect('back')
-            }
+router.post('/recharge', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
+    const operator = req.body.operator;
+    const state = req.body.state;
+    const number = req.body.number;
+    const message = req.body.message;
+    let amount = req.body.amount;
+    amount = parseInt(amount);
 
-            if (req.user.credits > tckAmount) {
-                req.user.credits -= tckAmount
-                req.user.save()
-            } else {
-                req.flash("error", "You do not have enough credits in your account");
-                return res.redirect('back')
-            }
-            rechargeDB.create({
-                user: req.user._id,
-                info: {
-                    operator: operator,
-                    state: state,
-                    number: number,
-                    amount: amount
-                },
-                amount: tckAmount
-            })
-                .then(data => {
-                    req.flash("success", "Cool! Your request is submitted!");
-                    return res.redirect('back')
-                })
-                .catch( err => {
-                    req.flash("error", "Something is wants Wrong.");
-                    res.redirect('back');
-                    console.log("Database Update Failed!");
-                    console.log(err);
-                })
+    if (amount < 10) {
+        req.flash("error", "Amount cannot be less than 10!");
+        return res.redirect('back')
+    }
+
+    if (req.user.credits > amount) {
+        req.user.credits -= amount;
+        req.user.save()
+    } else {
+        req.flash("error", "You do not have enough credits in your account");
+        return res.redirect('back')
+    }
+
+    widwrawlDB.create({
+        user: req.user._id,
+        method: 2,
+        recharge: {
+            operator: operator,
+            state: state,
+            number: number,
+        },
+        message: message,
+        amount: amount
+    })
+        .then(data => {
+            req.flash("success", "Cool! Your request has been submitted!");
+            return res.redirect('back')
         })
-        .catch( err => {
+        .catch(err => {
             req.flash("error", "Something is wants Wrong.");
             res.redirect('back');
             console.log("Database Update Failed!");

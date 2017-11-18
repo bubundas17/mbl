@@ -1,0 +1,45 @@
+<% include ../../inc/usercpHead %>
+<% include ../../inc/usercpsider.ejs %>
+
+<div class="list-group">
+    <div class="list-group-item active">
+        <h5>Withdrawal Via Mobile Recharge</h5>
+    </div>
+    <div class="list-group-item">
+        <p>Here you can Withdrawal your credits to bank.</p>
+        <p class="info"><strong>Note: Please fill the withdrawal form carefully, it can't be undone
+                later!</strong></p>
+    </div>
+    <div id="form">
+        <form action="/clientarea/withdrawal/bank" method="post" class="form-group">
+            <div class="list-group-item">
+                <small>Payee Name:</small>
+                <input type="text" placeholder="Payee" class="form-control" name="payee" required>
+            </div>
+            <div class="list-group-item">
+                <small>Name of Bank:</small>
+                <input type="text" placeholder="Bank's Name" class="form-control" name="bank" required>
+            </div>
+            <div class="list-group-item">
+                <small>IFSC Code</small>
+                <input type="text" placeholder="IFSC" class="form-control" name="ifsc" required>
+            </div>
+            <div class="list-group-item">
+                <small>Account Number</small>
+                <input type="text" placeholder="A/C Number" class="form-control" name="accountnumber" required>
+            </div>
+            <div class="list-group-item">
+                <small>Amount: (Min RS. 100)</small>
+                <input type="number" placeholder="Amount to be trnsfered" class="form-control" v-model="amount" name="amount" required>
+            </div>
+            <div class="list-group-item">
+                <small>Message:</small>
+                <textarea name="message" id="" cols="30" rows="10" class="form-control" placeholder="Leave A Message for Admin"></textarea>
+            </div>
+            <div class="list-group-item">
+                <input type="submit" class="btn btn-success" value="Submit!" id="rech">
+            </div>
+        </form>
+    </div>
+</div>
+<% include ../../inc/footer %>

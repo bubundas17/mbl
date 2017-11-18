@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/bank.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/bitcoin.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/referialincome.js" afterPath="$PROJECT_DIR$/models/referialincome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/tickets/index.ejs" afterPath="$PROJECT_DIR$/views/tickets/index.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/withdrawal.js" afterPath="$PROJECT_DIR$/models/withdrawal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/admin/recharge.js" afterPath="$PROJECT_DIR$/routs/admin/recharge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/admin/users.js" afterPath="$PROJECT_DIR$/routs/admin/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea/referral.js" afterPath="$PROJECT_DIR$/routs/clientarea/referral.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea/withdrawal.js" afterPath="$PROJECT_DIR$/routs/clientarea/withdrawal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea_old.js" afterPath="$PROJECT_DIR$/routs/clientarea_old.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inc/usercpsider.ejs" afterPath="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/referialincome.js" afterPath="$PROJECT_DIR$/models/referrals.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,6 +29,17 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="mission-billionaire" />
@@ -28,41 +52,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="usercpsider.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
+      <file leaf-file-name="withdrawal.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routs/clientarea/withdrawal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="253">
+              <caret line="11" column="77" lean-forward="true" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+              <folding>
+                <element signature="e#947#1079#0" expanded="false" />
+                <element signature="e#1164#2395#0" expanded="false" />
+                <element signature="e#1436#1542#0" expanded="false" />
+                <element signature="e#1579#1646#0" expanded="false" />
+                <element signature="e#1652#1773#0" expanded="false" />
+                <element signature="e#1797#2042#0" expanded="false" />
+                <element signature="e#2482#2613#0" expanded="false" />
+                <element signature="e#2701#3696#0" expanded="false" />
+                <element signature="e#3784#4016#0" expanded="false" />
+                <element signature="e#4105#5288#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="withdrawal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routs/clientarea/withdrawal.js">
+        <entry file="file://$PROJECT_DIR$/models/withdrawal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2990">
-              <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+            <state relative-caret-position="345">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routs/clientarea/index.js">
+      <file leaf-file-name="bank.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/bank.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="230">
+              <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/tickets/index.ejs">
+      <file leaf-file-name="bitcoin.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/bitcoin.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="155">
+              <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -71,28 +106,18 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="782">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="tkc.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="referialincome.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/referialincome.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="253">
+              <caret line="11" column="52" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,28 +126,46 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routs/admin/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+            <state relative-caret-position="296">
+              <caret line="87" column="86" lean-forward="false" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
+              <folding>
+                <element signature="e#337#1035#0" expanded="false" />
+                <element signature="e#1120#1880#0" expanded="false" />
+                <element signature="e#1967#2307#0" expanded="false" />
+                <element signature="e#2396#2703#0" expanded="false" />
+                <element signature="e#2793#3602#0" expanded="false" />
+                <element signature="e#3685#5842#0" expanded="false" />
+                <element signature="e#5929#6289#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routs/admin/recharge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="func.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includs/func.js">
+      <file leaf-file-name="viewUser.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/admin/users/viewUser.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="224">
+              <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/profile/edit.ejs">
+      <file leaf-file-name="statement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/statement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -221,22 +264,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/admin/viewplan.ejs" />
-        <option value="$PROJECT_DIR$/views/admin/viewservice.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/activation/activate.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/income/dimond.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/income/gold.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/income/platinum.ejs" />
         <option value="$PROJECT_DIR$/views/clientarea/income/referral.ejs" />
         <option value="$PROJECT_DIR$/views/clientarea/payments/proceed.ejs" />
         <option value="$PROJECT_DIR$/views/clientarea/referrals/direct.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" />
         <option value="$PROJECT_DIR$/routs/clientarea_old.js" />
         <option value="$PROJECT_DIR$/views/inc/footer.ejs" />
         <option value="$PROJECT_DIR$/views/profile/chengepass.ejs" />
         <option value="$PROJECT_DIR$/views/clientarea/statement.ejs" />
-        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" />
         <option value="$PROJECT_DIR$/views/clientarea/index.ejs" />
         <option value="$PROJECT_DIR$/views/admin/index.ejs" />
         <option value="$PROJECT_DIR$/views/inc/sider.ejs" />
@@ -256,22 +290,31 @@
         <option value="$PROJECT_DIR$/views/profile/index.ejs" />
         <option value="$PROJECT_DIR$/routs/profile.js" />
         <option value="$PROJECT_DIR$/views/profile/edit.ejs" />
-        <option value="$PROJECT_DIR$/routs/admin/users.js" />
         <option value="$PROJECT_DIR$/views/admin/users/viewUser.ejs" />
-        <option value="$PROJECT_DIR$/includs/func.js" />
         <option value="$PROJECT_DIR$/views/inc/profilesider.ejs" />
         <option value="$PROJECT_DIR$/views/auth/resetpwd.ejs" />
         <option value="$PROJECT_DIR$/views/inc/header.ejs" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/views/auth/signup.ejs" />
         <option value="$PROJECT_DIR$/routs/auth.js" />
-        <option value="$PROJECT_DIR$/routs/clientarea/referral.js" />
         <option value="$PROJECT_DIR$/views/clientarea/referrals/index.ejs" />
-        <option value="$PROJECT_DIR$/routs/clientarea/withdrawal.js" />
-        <option value="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
         <option value="$PROJECT_DIR$/views/tickets/index.ejs" />
-        <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/models/referialincome.js" />
+        <option value="$PROJECT_DIR$/models/user.js" />
+        <option value="$PROJECT_DIR$/routs/admin/users.js" />
+        <option value="$PROJECT_DIR$/includs/func.js" />
+        <option value="$PROJECT_DIR$/models/referrals.js" />
+        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" />
+        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" />
+        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" />
+        <option value="$PROJECT_DIR$/routs/clientarea/referral.js" />
+        <option value="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
+        <option value="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
+        <option value="$PROJECT_DIR$/models/withdrawal.js" />
+        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/bitcoin.ejs" />
+        <option value="$PROJECT_DIR$/views/clientarea/widwrawl/bank.ejs" />
+        <option value="$PROJECT_DIR$/routs/admin/recharge.js" />
+        <option value="$PROJECT_DIR$/routs/clientarea/withdrawal.js" />
       </list>
     </option>
   </component>
@@ -290,15 +333,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="664" />
-    <option name="width" value="1264" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="527" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -338,71 +387,65 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
+              <item name="includs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="routs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="routs" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="clientarea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mission-billionaire" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mission-billionaire" type="462c0819:PsiDirectoryNode" />
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tickets" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="widwrawl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/xampp/htdocs/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AtoZServer/V 1.0.3" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -505,6 +548,8 @@
       <workItem from="1510837735860" duration="6476000" />
       <workItem from="1510898297959" duration="2641000" />
       <workItem from="1510927786620" duration="2531000" />
+      <workItem from="1510944950901" duration="4192000" />
+      <workItem from="1510985702682" duration="18736000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -601,7 +646,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100558000" />
+    <option name="totallyTimeSpent" value="123486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,8 +658,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -623,16 +667,16 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24854574" sideWeight="0.5045558" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32154697" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24751382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32154697" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24751382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282887" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12473348" sideWeight="0.49544418" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444563" sideWeight="0.49544418" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24918567" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -661,74 +705,19 @@
     <MESSAGE value="Test Deployment #1" />
     <MESSAGE value="Referred User List Added!" />
     <MESSAGE value="Withdrawal And Support tickets added in User Dash board! And Some Minor UI Improvements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Withdrawal And Support tickets added in User Dash board! And Some Minor UI Improvements." />
+    <MESSAGE value="Withdrawal and Tree view added!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Withdrawal and Tree view added!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="30" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/404.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/recharge_old.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/statement.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/tickets/view.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2652">
@@ -754,13 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/withdrawal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -845,13 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/users/viewUser.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routs/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1378">
@@ -916,34 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/direct.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="80" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routs/clientarea/referral.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="36" column="3" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/auth/resetpwd.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,30 +909,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routs/clientarea/withdrawal.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2990">
-          <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routs/clientarea/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        <state relative-caret-position="3427">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -995,43 +928,198 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
+    <entry file="file://$PROJECT_DIR$/includs/func.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="1075">
+          <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+          <folding>
+            <element signature="e#396#477#0" expanded="false" />
+            <element signature="e#2464#2902#0" expanded="false" />
+            <element signature="e#2968#3071#0" expanded="false" />
+            <element signature="e#3147#3459#0" expanded="false" />
+            <element signature="e#3553#3896#0" expanded="false" />
+            <element signature="e#3964#4329#0" expanded="false" />
+            <element signature="e#4404#5197#0" expanded="false" />
+            <element signature="e#5249#5527#0" expanded="false" />
+            <element signature="e#5597#5865#0" expanded="false" />
+            <element signature="e#5917#7494#0" expanded="false" />
+            <element signature="e#7521#7935#0" expanded="false" />
+            <element signature="e#7965#8217#0" expanded="false" />
+            <element signature="e#8266#9129#0" expanded="false" />
+            <element signature="e#9267#10110#0" expanded="false" />
+            <element signature="e#10141#10276#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/referrals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/direct.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/referialincome.js">
+    <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="54" column="25" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <caret line="51" column="61" lean-forward="true" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routs/clientarea/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routs/clientarea/referral.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1587">
+          <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="99" lean-forward="false" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="52" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/bitcoin.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/clientarea/widwrawl/bank.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routs/admin/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        <state relative-caret-position="296">
+          <caret line="87" column="86" lean-forward="false" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
+          <folding>
+            <element signature="e#337#1035#0" expanded="false" />
+            <element signature="e#1120#1880#0" expanded="false" />
+            <element signature="e#1967#2307#0" expanded="false" />
+            <element signature="e#2396#2703#0" expanded="false" />
+            <element signature="e#2793#3602#0" expanded="false" />
+            <element signature="e#3685#5842#0" expanded="false" />
+            <element signature="e#5929#6289#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/statement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includs/func.js">
+    <entry file="file://$PROJECT_DIR$/views/admin/users/viewUser.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="28" />
+        <state relative-caret-position="224">
+          <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="53" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routs/admin/recharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/withdrawal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routs/clientarea/withdrawal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="77" lean-forward="true" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding>
+            <element signature="e#947#1079#0" expanded="false" />
+            <element signature="e#1164#2395#0" expanded="false" />
+            <element signature="e#1436#1542#0" expanded="false" />
+            <element signature="e#1579#1646#0" expanded="false" />
+            <element signature="e#1652#1773#0" expanded="false" />
+            <element signature="e#1797#2042#0" expanded="false" />
+            <element signature="e#2482#2613#0" expanded="false" />
+            <element signature="e#2701#3696#0" expanded="false" />
+            <element signature="e#3784#4016#0" expanded="false" />
+            <element signature="e#4105#5288#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

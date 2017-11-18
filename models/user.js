@@ -21,7 +21,7 @@ const postSchema = new mongoose.Schema({
         type: String
     },
     meta: {
-        email: {type: String, required: true, unique: true}, // Users Cant chenge it later.
+        email: {type: String, required: true, unique: true}, // Users Can't change it later.
         phone: {type: Number, required: true},
         dateOfBarth: String,
         zebpay: {type: Number},

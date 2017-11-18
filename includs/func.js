@@ -6,7 +6,7 @@ const config = require('../config');
 // Databases.
 const userDB = require('../models/user');
 const statementDB = require('../models/statement');
-const ReferialincomeBD = require('../models/referialincome');
+const ReferialincomeBD = require('../models/referrals');
 
 let func = {};
 // Random Password Salt Generator
@@ -75,6 +75,8 @@ func.doRefCredit = (userc) => {
                 us.save();
                 ReferialincomeBD.create({
                     user: us._id,
+                    refUser: userc._id,
+                    level: (index + 1),
                     description: "Activation of a user on level " + (index + 1),
                     amount: 100
                 })
@@ -88,17 +90,17 @@ func.doRefCredit = (userc) => {
 // Make Email Address Show Parthia.
 func.hideEmail = email => {
     const parts = email.split("@");
-    var name = parts[0];
-    var result = name[2];
-    for (var i = 1; i < name.length; i++) {
+    let name = parts[0];
+    let result = name[2];
+    for (let i = 1; i < name.length; i++) {
         result += "*";
     }
     result += name.charAt(name.length - 1);
     result += "@";
-    var domain = parts[1];
+    let domain = parts[1];
     result += domain.charAt(0);
-    var dot = domain.indexOf(".");
-    for (var i = 1; i < dot; i++) {
+    let dot = domain.indexOf(".");
+    for (i = 1; i < dot; i++) {
         result += "*";
     }
     result += domain.substring(dot);
@@ -142,7 +144,6 @@ func.setPassword = function (user, password, callback) {
 
 // Setting Up Global Variable.
 func.global = (req, res, next) => {
-    var sess = req.session;
     res.locals.userInfo = false;
     res.locals.body = req.body;
     res.locals.func = func;
@@ -185,10 +186,10 @@ func.checkUser = (username, pwd, callback) => {
 };
 // Random salt Generator.
 func.createSalt = () => {
-    var length = 18,
+    let length = 18,
         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
         retVal = "";
-    for (var i = 0, n = charset.length; i < length; ++i) {
+    for (let i = 0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));
     }
     return retVal;

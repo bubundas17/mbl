@@ -8,11 +8,27 @@ const Schema = new mongoose.Schema({
         required: true
     },
     amount: {type: Number},
-    tkcaddress: {type: String},
-    status: {type: String, default: "PROCESSING"}, // PROCESSING, SUCCEED and FAILED
-    description: {type: String}, // message for admin from user
-    remarks: {type: String}, // message for user about request details.
-    date: {type: Date, default: Date.now}
+    method: {type: Number, required: true}, // 1 for Bank And 2 for Recharge, 3 For Bitcoin
+    bank: {
+        payee: String, // payee Name
+        bank: String, // Name of the bank
+        accountNumber: Number, // Bank account number
+        ifsc: {type: String}, // Ifsc Code
+    },
+    recharge: {
+        number: Number,
+        operator: String,
+        state: String,
+        plan: Number // For Prepaid 1, And 2 for Postpaid.
+    },
+    bitcoin: {
+        walletAddress: String
+    },
+    // Bitcoin Wallet Adress
+    status: {type: Number, default: 1}, // 1 = POSSESSING, 2 = SUCCEED, 3 = INVALID, 4 = FAILED
+    message: {type: String}, // message for admin from user
+    remarks: {type: String},   // message for user about request details.
+    date: {type: Date, default: Date.now} // Timestamp of the request Created.
 });
 
 

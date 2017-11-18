@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/bank.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/bitcoin.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/withdrawal.js" afterPath="$PROJECT_DIR$/models/withdrawal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/admin/recharge.js" afterPath="$PROJECT_DIR$/routs/admin/recharge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/admin/users.js" afterPath="$PROJECT_DIR$/routs/admin/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea/referral.js" afterPath="$PROJECT_DIR$/routs/clientarea/referral.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea/withdrawal.js" afterPath="$PROJECT_DIR$/routs/clientarea/withdrawal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/clientarea_old.js" afterPath="$PROJECT_DIR$/routs/clientarea_old.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" afterPath="$PROJECT_DIR$/views/clientarea/widwrawl/tkc.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inc/usercpsider.ejs" afterPath="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/referialincome.js" afterPath="$PROJECT_DIR$/models/referrals.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -549,7 +533,7 @@
       <workItem from="1510898297959" duration="2641000" />
       <workItem from="1510927786620" duration="2531000" />
       <workItem from="1510944950901" duration="4192000" />
-      <workItem from="1510985702682" duration="18736000" />
+      <workItem from="1510985702682" duration="18877000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -642,11 +626,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510857279860</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Withdrawal and Tree view added!">
+      <created>1511034353531</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511034353531</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123486000" />
+    <option name="totallyTimeSpent" value="123627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

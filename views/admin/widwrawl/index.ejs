@@ -1,76 +1,45 @@
-<% include ../../inc/header %>
-<div class="container">
-  <h1>Client area</h1>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <% include ../../inc/admincpsider.ejs %>
+<% include ../../inc/usercpHead.ejs %>
+<% include ../../inc/admincpsider.ejs %>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4>Pending Withdrawal</h4>
     </div>
-    <div class="col-md-8">
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h4>Pending Withdrawal</h4>
-        </div>
-        <div class="panel-body">
-          <div class="list-group">
+    <div class="panel-body">
+        <div class="list-group">
             <div class="list-group-item active"><h4>Mobile Recharge Requests</h4></div>
             <div class="list-group-item">
-              <b>Current INR TO TKC Rates Are: 1INR = <%= info.tkcRates %> TKC <a href="/admin/widwrawl/config">Configure...</a></b>
-            </div>
-            <div class="list-group-item">
-              <table class="table table-hover">
-                  <thead>
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                      <th>Mobile No.</th>
-                      <th>INR</th>
-                      <th>TKC</th>
-                      <th>Status</th>
-                      <th>View</th>
+                        <th>Amount</th>
+                        <th>METHOD</th>
+                        <th>VIA</th>
+                        <th>Action</th>
                     </tr>
-                  </thead>
-                  <% recharges.forEach( token => { %>
+                    </thead>
+                    <% widwrawls.forEach( token => { %>
                     <tbody>
-                        <tr>
-                          <td><strong><%= token.info.number %></strong></td>
-                          <td><span><%= token.info.amount %> INR</span></td>
-                          <td><span><%= token.amount %> TKC</span></td>
-                          <td><span><%= token.status %></span></td>
-                          <td><a href="/admin/widwrawl/recharge/<%= token._id %>" class="btn btn-info">VIEW</a></td>
-                        </tr>
-                      </tbody>
-                  <% }) %>
-              </table>
-            </div>
-          </div>
-          <div class="list-group">
-            <div class="list-group-item active"><h4>Withdrawal Requests</h4></div>
-            <div class="list-group-item">
-              <table class="table table-hover">
-                  <thead>
                     <tr>
-                      <th>Amount</th>
-                      <th>TKC Address</th>
-                      <th>Status</th>
-                      <th>View</th>
+                        <td><strong><%= token.amount %> INR</strong></td>
+                        <%
+                            var method;
+                            if(token.method === 1) {
+                                method = "BANK";
+                            } else if (token.method === 2){
+                                method = "RECHARGE";
+                            } else if(token.method === 3){
+                                method = "BITCOIN";
+                            }
+                        %>
+                        <td><strong><%= method %></strong></td>
+                        <td><strong><%= func.getWidId(token, token.method) %></strong></td>
+                        <td><a class="btn btn-success" href="/admin/withdrawals/<%= token._id %>/view">VIEW</a></td>
                     </tr>
-                  </thead>
-                  <% widwrawls.forEach( token => { %>
-                    <tbody>
-                        <tr>
-                          <td><strong><%= token.amount %> TKC</strong></td>
-                          <td><span><%= token.tkcaddress %></span></td>
-                          <td><span><%= token.status %></span></td>
-                          <td><a href="/admin/widwrawl/tkc/<%= token._id %>" class="btn btn-info">VIEW</a></td>
-                        </tr>
-                      </tbody>
-                  <% }) %>
-              </table>
+                    </tbody>
+                    <% }) %>
+                </table>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 <% include ../../inc/footer %>

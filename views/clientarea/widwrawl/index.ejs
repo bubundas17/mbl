@@ -9,16 +9,28 @@
             <thead>
             <tr>
                 <th>Amount</th>
-                <th>TKC Address</th>
+                <th>Method</th>
+                <th>Via</th>
                 <th>Status</th>
             </tr>
             </thead>
             <% widwrawls.forEach( token => { %>
             <tbody>
             <tr>
-                <td><strong><%= token.amount %> TKC</strong></td>
-                <td><span><%= token.tkcaddress %></span></td>
-                <td><span><%= token.status %></span></td>
+                <td><strong><%= token.amount %> INR</strong></td>
+                <%
+                    var method;
+                 if(token.method === 1) {
+                  method = "BANK";
+                 } else if (token.method === 2){
+                     method = "RECHARGE"
+                 } else if(token.method === 3){
+                     method = "BITCOIN"
+                 }
+                %>
+                <td><strong><%= method %></strong></td>
+                <td><strong><%= func.getWidId(token, token.method) %></strong></td>
+                <td><strong style="color: rgba(91,240,21,0.74)">POSSESSING</strong></td>
             </tr>
             </tbody>
             <% }) %>
@@ -35,19 +47,41 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Mo. Number</th>
-                <th>INR</th>
-                <th>TKC</th>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Via</th>
                 <th>Status</th>
             </tr>
             </thead>
-            <% recharges.forEach( token => { %>
+            <% all.forEach( token => { %>
             <tbody>
             <tr>
-                <td><strong><%= token.info.number %></strong></td>
-                <td><span><%= token.info.amount %> INR</span></td>
-                <td><span><%= token.amount %> TKC</span></td>
-                <td><span><%= token.status %></span></td>
+                <td><strong><%= token.amount %> INR</strong></td>
+                <%
+                    var method;
+                    if(token.method === 1) {
+                        method = "BANK";
+                    } else if (token.method === 2){
+                        method = "RECHARGE"
+                    } else if(token.method === 3){
+                        method = "BITCOIN"
+                    }
+                %>
+                <td><strong><%= method %></strong></td>
+                <td><strong><%= func.getWidId(token, token.method) %></strong></td>
+                <%
+                    var status;
+                    if(token.status === 1) {
+                        status = '<strong style="color: rgba(91,240,21,0.74)">POSSESSING</strong>';
+                    } else if (token.status === 2){
+                        status = '<strong style="color: rgba(14,21,240,0.74)">SUCCEED</strong>';
+                    } else if(token.status === 3){
+                        status = '<strong style="color: rgba(228,240,0,0.74)">INVALID</strong>';
+                    } else if (token.status === 2) {
+                        status = '<strong style="color: rgba(240,5,0,0.74)">FAILED</strong>';
+                    }
+                %>
+                <td><%- status %></td>
             </tr>
             </tbody>
             <% }) %>

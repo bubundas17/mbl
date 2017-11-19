@@ -6,11 +6,10 @@ const router = express.Router();
 
 const sysinfoDB = require('../../models/sysinfo');
 const widwrawlDB = require('../../models/withdrawal');
-const rechargeDB = require('../../models/recharge');
 
 // Withdrawal Paths
 router.get('/', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
-    Promise.all([widwrawlDB.find({user: req.user._id, status: 1}), rechargeDB.find({user: req.user._id})])
+    Promise.all([widwrawlDB.find({user: req.user._id, status: 1}), widwrawlDB.find({user: req.user._id})])
         .then(reqs => {
             res.locals.title = 'Withdrawal Requests ' + ' - ' + res.locals.title;
             res.render('clientarea/widwrawl/index.ejs', {widwrawls: reqs[0], all: reqs[1]})
@@ -97,7 +96,7 @@ router.post('/bitcoin', middlewares.ifLoggedIn, middlewares.ifActive, (req, res)
     widwrawlDB.create({
         user: req.user._id,
         amount: amount,
-        method: 4,
+        method: 3,
         bitcoin: {
             walletAddress: req.user.bitcoin
         },

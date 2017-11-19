@@ -1,11 +1,135 @@
 <%- include inc/header %>
 <%- include inc/sider %>
-<div id="landing-top">
-    <h1>Mission Billionaire</h1>
-    <h3>Our Unique Mission To Become Billionaire</h3>
-    <hr>
-    <button class="btn btn-success btn-lg">Follow Along!</button>
-</div>
-
+<main>
+    <section class="main-page">
+        <div class="main-image">
+            <div class="showcase">
+                <h1>Welcome to Mission Billionaire</h1>
+                <hr>
+                <p> Join to our unique mission to become Billionaire</p>
+                <a href="/signup" class="btn btn-info btn-lg">Join Now!</a>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div class="container">
+            <h1>About Us</h1>
+            <hr>
+            <div class="row ">
+                <div class="col-lg-6"><img src="/images/img-1.webp" alt=""></div>
+                <div class="col-lg-6">
+                    <div class="container side-content">
+                        <h1>Tailored Services</h1>
+                        <p>We work with you to figure out exactly what services your business needs to run more
+                            efficiently.
+                            Once that is established, our consulting team can work with you to figure out how you can
+                            grow
+                            your business from where it is now to where you dream of taking it. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="container side-content">
+                        <h1>Regulatory Compliance</h1>
+                        <p>We work with you to figure out exactly what services your business needs to run more
+                            efficiently.
+                            Once that is established, our consulting team can work with you to figure out how you can
+                            grow
+                            your business from where it is now to where you dream of taking it. </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12"><img src="/images/img-2.webp" alt=""></div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-xs-12"><img src="/images/img-3.webp" alt=""></div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="container side-content">
+                        <h1>Customer Support</h1>
+                        <p>We work with you to figure out exactly what services your business needs to run more
+                            efficiently.
+                            Once that is established, our consulting team can work with you to figure out how you can
+                            grow
+                            your business from where it is now to where you dream of taking it. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="container-fluid">
+                                <img src="/images/anita.webp" alt="" class="avatar">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="container-fluid avatar-about">
+                                <h2>Anita</h2>
+                                <p>Anita Kumari her career in April 1999 at Ruman Limited Partners. In 2003, she left
+                                    RLP and has been with us ever since. She specializes in institutional and private
+                                    insurance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="container-fluid">
+                                <img src="/images/jon.webp" alt="" class="avatar">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="container-fluid avatar-about">
+                                <h2>Jon</h2>
+                                <p>Jon Steaf began his finance career in April 2010 at Gage Ltd. In November 2012, Jeff left Gage and started working with our clients to help them with their financial planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="container-fluid">
+                                <img src="/images/jane.webp" alt="" class="avatar">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="container-fluid avatar-about">
+                                <h2>Jane</h2>
+                                <p>Jane began her business management career in April 1997 at Sorensen Limited Partners. In November 2006, she left Sorenson to manage our business development team. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="btcrate">
+        <div class="container">
+            <h2>BitCoin Live Rates</h2>
+            <div class="container-fluid">
+                <div class="btc">
+                    <div class="btcwdgt-price" bw-cur="inr" bw-theme="light"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    (function(b,i,t,C,O,I,N) {
+        window.addEventListener('load',function() {
+            if(b.getElementById(C))return;
+            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+        },false)
+    })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+</script>
 
 <%- include inc/footer %>

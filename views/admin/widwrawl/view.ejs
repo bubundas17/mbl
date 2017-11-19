@@ -1,0 +1,134 @@
+<% include ../../inc/usercpHead %>
+<% include ../../inc/admincpsider.ejs %>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4>Withdrawal Info</h4>
+    </div>
+    <div class="panel-body">
+        <div class="box">
+            <div class="box heading"><h3>User Info</h3></div>
+            <div class="box-body">
+                <div class="list-group">
+                    <div class="list-group-item"><strong>Username: <%= data.user.username %></strong></div>
+                    <div class="list-group-item"><strong>Email: <%= data.user.meta.email %></strong></div>
+                    <div class="list-group-item"><strong>Credits: <%= data.user.credits.toFixed(0) %> INR</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Withdrawl Info</h3>
+            </div>
+            <div class="box-body">
+                <%
+                var status;
+                if (data.status === 1) {
+                    status = '<strong style="color: rgba(91,240,21,0.74)">POSSESSING</strong>';
+                } else if (data.status === 2) {
+                    status = '<strong style="color: rgba(14,21,240,0.74)">SUCCEED</strong>';
+                } else if (data.status === 3) {
+                    status = '<strong style="color: rgba(228,240,0,0.74)">INVALID</strong>';
+                } else if (data.status === 4) {
+                    status = '<strong style="color: rgba(240,5,0,0.74)">FAILED</strong>';
+                }
+                %>
+                <% if(data.method === 1){ %>
+                <!--bank-->
+                <div class="list-group">
+                    <div class="list-group-item active">
+                        <strong>Withdraw Method: Bank</strong>
+                    </div>
+                    <div class="list-group-item">
+                        <h2>Status: <span style="color: #4aa103;"><%- status %></span></h2>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Amount: <span style="color: #4aa103;"><%= data.amount %> INR</span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Payee Name: <span style="color: #4aa103;"><%= data.bank.payee %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Bank: <span style="color: #4aa103;"><%= data.bank.bank %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>A/C Number: <span style="color: #4aa103;"><%= data.bank.accountNumber %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>IFSC: <span style="color: #4aa103;"><%= data.bank.ifsc %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Message: <span style="color: #4aa103;"><%= data.message %></span></strong>
+                    </div>
+                </div>
+                <% } else if( data.method === 2 ){ %>
+                <!--Recharge-->
+                <div class="list-group">
+                    <div class="list-group-item active">
+                        <strong>Withdraw Method: Mobile Recharge</strong>
+                    </div>
+                    <div class="list-group-item">
+                        <h2>Status: <span style="color: #4aa103;"><%- status %></span></h2>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Amount: <span style="color: #4aa103;"><%= data.amount %> INR</span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>operater: <span style="color: #4aa103;"><%= data.recharge.operator %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Number: <span style="color: #4aa103;"><%= data.recharge.number %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>State: <span style="color: #4aa103;"><%= data.recharge.state %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Message: <span style="color: #4aa103;"><%= data.message %></span></strong>
+                    </div>
+                </div>
+                <% } else if( data.method === 3 ){ %>
+                <!--Bitcoin-->
+                <div class="list-group">
+                    <div class="list-group-item active">
+                        <strong>Withdraw Method: Mobile Recharge</strong>
+                    </div>
+                    <div class="list-group-item">
+                        <h2>Status: <span style="color: #4aa103;"><%- status %></span></h2>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Amount: <span style="color: #4aa103;"><%= data.amount %> INR</span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>BitCoin Address: <span style="color: #4aa103;"><%= data.bitcoin.walletAddress %></span></strong>
+                    </div>
+                    <div class="list-group-item">
+                        <strong>Message: <span style="color: #4aa103;"><%= data.message %></span></strong>
+                    </div>
+                </div>
+                <% } %>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <h5>Note: The Amount is already deducted from the user's account.</h5>
+                    </div>
+                    <div class="list-group-item active">
+                        Update Withdrawl Status
+                    </div>
+                    <div class="list-group-item">
+                        <form action="/admin/withdrawals/<%= data._id %>" method="post" class="form-inline">
+                            <select name="status" id="" class="form-control">
+                                <option value="1">POSSESSING</option>
+                                <option value="2">SUCCEED</option>
+                                <option value="3">INVALID</option>
+                                <option value="4">FAILED</option>
+                            </select>
+                            <button class="btn btn-success">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../../inc/footer %>

@@ -23,6 +23,6 @@ router.use('/recharge', rechargeRoutes);
 router.use('/tickets', ticketsRoutes);
 router.use('/users', usersRoutes);
 router.use('/token', token);
-router.use('/widwrawl', widwrawls);
+router.use('/withdrawals', widwrawls);
 
 module.exports = router;

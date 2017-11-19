@@ -361,4 +361,19 @@ func.toTitleCase = (str) => {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 };
+
+func.getWidId = (obj, method)=> {
+    switch(method){
+        case 1:
+            return obj.bank.accountNumber;
+            break;
+        case 2:
+            return obj.recharge.number;
+            break;
+        case 3:
+            return obj.bitcoin.walletAddress;
+            break
+    }
+
+};
 module.exports = func;

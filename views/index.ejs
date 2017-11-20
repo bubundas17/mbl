@@ -4,9 +4,8 @@
     <section class="main-page">
         <div class="main-image">
             <div class="showcase">
-                <h1>Welcome to Mission Billionaire</h1>
-                <hr>
-                <p> Join to our unique mission to become Billionaire</p>
+                <span id="typed"></span>
+                <br>
                 <a href="/signup" class="btn btn-info btn-lg">Join Now!</a>
             </div>
         </div>
@@ -122,6 +121,7 @@
         </div>
     </section>
 </main>
+<script src="/plugins/typed.min.js"></script>
 <script>
     (function(b,i,t,C,O,I,N) {
         window.addEventListener('load',function() {
@@ -131,5 +131,17 @@
         },false)
     })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
 </script>
-
+<script>
+    new Typed('#typed', {
+        strings: [
+            '<h1>Welcome To Mission Billionaire</h1>',
+            '<h1>Our Unique Journey to become Billionaire</h1>',
+            '<h1>You can also be one! </h1><br> <p>Join Us To Get Started!</p>'],
+        typeSpeed: 40,
+        backSpeed: 0,
+        fadeOut: true,
+        cursorChar: '',
+        loop: true
+    });
+</script>
 <%- include inc/footer %>

@@ -124,8 +124,6 @@ router.get('/recharge', middlewares.ifLoggedIn, middlewares.ifActive, (req, res)
 });
 
 router.post('/recharge', middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => {
-    const operator = req.body.operator;
-    const state = req.body.state;
     const number = req.body.number;
     const message = req.body.message;
     let amount = req.body.amount;
@@ -148,8 +146,6 @@ router.post('/recharge', middlewares.ifLoggedIn, middlewares.ifActive, (req, res
         user: req.user._id,
         method: 2,
         recharge: {
-            operator: operator,
-            state: state,
             number: number,
         },
         message: message,

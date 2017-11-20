@@ -17,9 +17,6 @@ const Schema = new mongoose.Schema({
     },
     recharge: {
         number: Number,
-        operator: String,
-        state: String,
-        plan: Number // For Prepaid 1, And 2 for Postpaid.
     },
     bitcoin: {
         walletAddress: String

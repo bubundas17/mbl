@@ -57,8 +57,10 @@ func.doRefCredit = (userc) => {
             .then(us => {
                 us.credits += credit;
                 us.save();
-                ReferialincomeBD.create({
+                return ReferialincomeBD.create({
                     user: us._id,
+                    refUser: userc._id,
+                    level: (index + 1),
                     description: "Activation of a user on level " + (index + 1),
                     amount: credit
                 })
@@ -73,11 +75,11 @@ func.doRefCredit = (userc) => {
             .then(us => {
                 us.credits += 100;
                 us.save();
-                ReferialincomeBD.create({
+                return ReferialincomeBD.create({
                     user: us._id,
                     refUser: userc._id,
-                    level: (index + 1),
-                    description: "Activation of a user on level " + (index + 1),
+                    level: 1,
+                    description: "Activation of a user on level 1",
                     amount: 100
                 })
             })

@@ -18,9 +18,9 @@ func.ifActive = (req, res, next) => {
   if (req.user.isActive) {
     return next()
   }
-  req.flash('info', 'Please Activate your account.')
-  res.redirect('/clientarea/active')
-}
+  req.flash('info', 'Please Activate your account.');
+  res.redirect('back')
+};
 
 func.ifNotActive = (req, res, next) => {
   if (req.user.isActive) {

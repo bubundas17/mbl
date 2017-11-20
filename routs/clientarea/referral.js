@@ -9,7 +9,7 @@ const config        = require('../../config.js');
 
 
 router.get('/', middlewares.ifLoggedIn, function(req, res) {
-    var query = req.query.q || ".*"
+    let query = req.query.q || ".*";
     userDB.paginate({referedBy: req.user._id,
         $or: [
 
@@ -40,8 +40,9 @@ router.get('/', middlewares.ifLoggedIn, function(req, res) {
 router.get('/tree', middlewares.ifLoggedIn, function(req, res) {
     let query = req.query.q || ".*";
     let level = req.query.level || 1;
+    level = parseInt(level);
 
-    referralDB.paginate({refUser: req.user._id,
+    referralDB.paginate({user: req.user,
         level: level,
         // $or: [
         //
@@ -54,7 +55,7 @@ router.get('/tree', middlewares.ifLoggedIn, function(req, res) {
     }, {
         page: req.query.page || 1,
         limit: 10,
-        populate: "user",
+        populate: "refUser",
         sort: {_id: -1}
     })
         .then((users) => {

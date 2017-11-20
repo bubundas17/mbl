@@ -19,6 +19,7 @@ const userDB          = require('./models/user.js')
 const Insta             = require('instamojo-nodejs');
 const sysinfoDB       = require('./models/sysinfo')
 
+process.env.NODE_ENV = 'production';
 
 // app.use(require('serve-static')(__dirname + '/../../public'));
 // app.use(require('body-parser').urlencoded({ extended: true }));

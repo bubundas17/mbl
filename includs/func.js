@@ -70,7 +70,7 @@ func.doRefCredit = (userc) => {
             })
     });
 
-    if (userc.referedBy !== userc.upTree[0]) {
+    if (! userc.referedBy.equals(userc.upTree[0])) {
         userDB.findById(userc.referedBy)
             .then(us => {
                 us.credits += 100;
@@ -79,7 +79,7 @@ func.doRefCredit = (userc) => {
                     user: us._id,
                     refUser: userc._id,
                     level: 1,
-                    description: "Activation of a user on level 1",
+                    description: "Direct Joining",
                     amount: 100
                 })
             })
@@ -337,7 +337,7 @@ func.getReferableUser = (user, callback) => {
             return callback(null, user);
         }
 
-        return userDB.findOne({upTree: user._id, totalReferred: {$lt: 2}})
+        userDB.findOne({upTree: user._id, totalReferred: {$lt: 2}})
             .then((value) => {
                 if (value) {
                     resolve(value);
@@ -350,6 +350,8 @@ func.getReferableUser = (user, callback) => {
                     resolve(value);
                     return callback(null, value);
                 }
+                reject("No User Found");
+                return callback(err, null);
             })
             .catch((err) => {
                 reject(err);

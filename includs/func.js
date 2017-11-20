@@ -70,7 +70,7 @@ func.doRefCredit = (userc) => {
             })
     });
 
-    if (userc.referedBy != userc.upTree[0]) {
+    if (userc.referedBy !== userc.upTree[0]) {
         userDB.findById(userc.referedBy)
             .then(us => {
                 us.credits += 100;

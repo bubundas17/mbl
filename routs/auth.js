@@ -267,7 +267,7 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                                     phone: phone,
                                     zebpay: zebpay
                                 },
-                                referedBy: refUser,
+                                referedBy: refUser._id,
                                 password: hash, // Storing Hashed password instead of actual password.
                                 salt: salt,
                                 bitcoin: btc// Storing Salt for later password generation posses.

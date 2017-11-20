@@ -16,6 +16,7 @@ func.password = (password, salt) => {
 
 
 func.doRefCredit = (userc) => {
+    let tasks = [];
     userc.upTree.forEach((user, index) => {
         let credit = 0;
         switch (index) {
@@ -56,37 +57,41 @@ func.doRefCredit = (userc) => {
         userDB.findById(user)
             .then(us => {
                 us.credits += credit;
-                us.save();
-                return ReferialincomeBD.create({
-                    user: us._id,
-                    refUser: userc._id,
-                    level: (index + 1),
-                    description: "Activation of a user on level " + (index + 1),
-                    amount: credit
-                })
-            })
-            .catch(e => {
-                console.log(e);
+                us.save( err =>{
+                    tasks.push(ReferialincomeBD.create({
+                        user: us._id,
+                        refUser: userc._id,
+                        level: (index + 1),
+                        description: "Activation of a user on level " + (index + 1),
+                        amount: credit
+                    }))
+                });
             })
     });
+    Promise.all(tasks)
+        .then( users => {
+            if (! userc.referedBy.equals(userc.upTree[0])) {
+                userDB.findById(userc.referedBy)
+                    .then(us => {
+                        us.credits += 100;
+                        us.save();
+                        return ReferialincomeBD.create({
+                            user: us._id,
+                            refUser: userc._id,
+                            level: 1,
+                            description: "Direct Joining",
+                            amount: 100
+                        })
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+            }
+        })
+        .catch( err => {
+            console.log(err)
+        })
 
-    if (! userc.referedBy.equals(userc.upTree[0])) {
-        userDB.findById(userc.referedBy)
-            .then(us => {
-                us.credits += 100;
-                us.save();
-                return ReferialincomeBD.create({
-                    user: us._id,
-                    refUser: userc._id,
-                    level: 1,
-                    description: "Direct Joining",
-                    amount: 100
-                })
-            })
-            .catch(e => {
-                console.log(e);
-            })
-    }
 };
 
 // Make Email Address Show Parthia.

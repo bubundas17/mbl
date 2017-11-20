@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/auth/login.ejs" afterPath="$PROJECT_DIR$/views/auth/login.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inc/sider.ejs" afterPath="$PROJECT_DIR$/views/inc/sider.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/auth/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+            <state relative-caret-position="667">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -62,6 +63,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sider.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/inc/sider.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -100,23 +111,25 @@
       <file leaf-file-name="func.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includs/func.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-269">
-              <caret line="188" column="25" lean-forward="false" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
+            <state relative-caret-position="753">
+              <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
               <folding>
-                <element signature="e#2535#2973#0" expanded="false" />
-                <element signature="e#3039#3142#0" expanded="false" />
-                <element signature="e#3218#3530#0" expanded="false" />
-                <element signature="e#3624#3967#0" expanded="false" />
-                <element signature="e#4035#4400#0" expanded="false" />
-                <element signature="e#4475#5268#0" expanded="false" />
-                <element signature="e#5668#5936#0" expanded="false" />
-                <element signature="e#5988#7565#0" expanded="false" />
-                <element signature="e#7592#8006#0" expanded="false" />
-                <element signature="e#8036#8288#0" expanded="false" />
-                <element signature="e#8337#9200#0" expanded="false" />
-                <element signature="e#9338#10181#0" expanded="false" />
-                <element signature="e#10212#10347#0" expanded="false" />
-                <element signature="e#10382#10645#0" expanded="false" />
+                <element signature="e#1969#2465#0" expanded="false" />
+                <element signature="e#2532#2970#0" expanded="false" />
+                <element signature="e#3036#3139#0" expanded="false" />
+                <element signature="e#3215#3527#0" expanded="false" />
+                <element signature="e#3621#3964#0" expanded="false" />
+                <element signature="e#4032#4397#0" expanded="false" />
+                <element signature="e#4472#5265#0" expanded="false" />
+                <element signature="e#5317#5595#0" expanded="false" />
+                <element signature="e#5665#5933#0" expanded="false" />
+                <element signature="e#5985#7562#0" expanded="false" />
+                <element signature="e#7589#8003#0" expanded="false" />
+                <element signature="e#8033#8285#0" expanded="false" />
+                <element signature="e#8334#9197#0" expanded="false" />
+                <element signature="e#9335#10178#0" expanded="false" />
+                <element signature="e#10209#10344#0" expanded="false" />
+                <element signature="e#10379#10642#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -285,7 +298,6 @@
         <option value="$PROJECT_DIR$/views/hhh.html" />
         <option value="$PROJECT_DIR$/public/style.css" />
         <option value="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
-        <option value="$PROJECT_DIR$/views/inc/sider.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/clientarea/widwrawl/recharge.ejs" />
         <option value="$PROJECT_DIR$/models/withdrawal.js" />
@@ -295,13 +307,14 @@
         <option value="$PROJECT_DIR$/views/inc/footer.ejs" />
         <option value="$PROJECT_DIR$/includs/middlewares.js" />
         <option value="$PROJECT_DIR$/routs/clientarea/referral.js" />
-        <option value="$PROJECT_DIR$/includs/func.js" />
         <option value="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/routs/admin/widwral.js" />
         <option value="$PROJECT_DIR$/routs/clientarea/index.js" />
         <option value="$PROJECT_DIR$/views/clientarea/index.ejs" />
         <option value="$PROJECT_DIR$/views/auth/login.ejs" />
+        <option value="$PROJECT_DIR$/includs/func.js" />
+        <option value="$PROJECT_DIR$/views/inc/sider.ejs" />
       </list>
     </option>
   </component>
@@ -392,6 +405,12 @@
               <item name="mbl" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mbl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbl" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -512,7 +531,7 @@
       <workItem from="1510944950901" duration="4192000" />
       <workItem from="1510985702682" duration="19169000" />
       <workItem from="1511067559572" duration="25296000" />
-      <workItem from="1511160109796" duration="12315000" />
+      <workItem from="1511160109796" duration="13283000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -626,11 +645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511119900996</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Obey! 1st Deployment!">
+      <created>1511182324008</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511182324010</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161530000" />
+    <option name="totallyTimeSpent" value="162498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,14 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/inc/sider.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2645">
@@ -1011,29 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includs/func.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="188" column="25" lean-forward="false" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
-          <folding>
-            <element signature="e#2535#2973#0" expanded="false" />
-            <element signature="e#3039#3142#0" expanded="false" />
-            <element signature="e#3218#3530#0" expanded="false" />
-            <element signature="e#3624#3967#0" expanded="false" />
-            <element signature="e#4035#4400#0" expanded="false" />
-            <element signature="e#4475#5268#0" expanded="false" />
-            <element signature="e#5668#5936#0" expanded="false" />
-            <element signature="e#5988#7565#0" expanded="false" />
-            <element signature="e#7592#8006#0" expanded="false" />
-            <element signature="e#8036#8288#0" expanded="false" />
-            <element signature="e#8337#9200#0" expanded="false" />
-            <element signature="e#9338#10181#0" expanded="false" />
-            <element signature="e#10212#10347#0" expanded="false" />
-            <element signature="e#10382#10645#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-173">
@@ -1128,6 +1123,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/auth/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includs/func.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding>
+            <element signature="e#1969#2465#0" expanded="false" />
+            <element signature="e#2532#2970#0" expanded="false" />
+            <element signature="e#3036#3139#0" expanded="false" />
+            <element signature="e#3215#3527#0" expanded="false" />
+            <element signature="e#3621#3964#0" expanded="false" />
+            <element signature="e#4032#4397#0" expanded="false" />
+            <element signature="e#4472#5265#0" expanded="false" />
+            <element signature="e#5317#5595#0" expanded="false" />
+            <element signature="e#5665#5933#0" expanded="false" />
+            <element signature="e#5985#7562#0" expanded="false" />
+            <element signature="e#7589#8003#0" expanded="false" />
+            <element signature="e#8033#8285#0" expanded="false" />
+            <element signature="e#8334#9197#0" expanded="false" />
+            <element signature="e#9335#10178#0" expanded="false" />
+            <element signature="e#10209#10344#0" expanded="false" />
+            <element signature="e#10379#10642#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/clientarea/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1136,10 +1164,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/auth/login.ejs">
+    <entry file="file://$PROJECT_DIR$/views/inc/sider.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        <state relative-caret-position="230">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>

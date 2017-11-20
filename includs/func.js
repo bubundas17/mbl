@@ -74,14 +74,18 @@ func.doRefCredit = (userc) => {
                 userDB.findById(userc.referedBy)
                     .then(us => {
                         us.credits += 100;
-                        us.save();
-                        return ReferialincomeBD.create({
-                            user: us._id,
-                            refUser: userc._id,
-                            level: 1,
-                            description: "Direct Joining",
-                            amount: 100
-                        })
+                        us.save( err => {
+                            if(err){
+                                return console.log(err)
+                            }
+                            return ReferialincomeBD.create({
+                                user: us._id,
+                                refUser: userc._id,
+                                level: 1,
+                                description: "Direct Joining",
+                                amount: 100
+                            })
+                        });
                     })
                     .catch(e => {
                         console.log(e);

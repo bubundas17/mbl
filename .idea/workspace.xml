@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,23 +110,23 @@
       <file leaf-file-name="func.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includs/func.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+            <state relative-caret-position="341">
+              <caret line="81" column="45" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
               <folding>
-                <element signature="e#2789#3227#0" expanded="false" />
-                <element signature="e#3293#3396#0" expanded="false" />
-                <element signature="e#3472#3784#0" expanded="false" />
-                <element signature="e#3878#4221#0" expanded="false" />
-                <element signature="e#4289#4654#0" expanded="false" />
-                <element signature="e#4729#5522#0" expanded="false" />
-                <element signature="e#5574#5852#0" expanded="false" />
-                <element signature="e#5922#6190#0" expanded="false" />
-                <element signature="e#6242#7819#0" expanded="false" />
-                <element signature="e#7846#8260#0" expanded="false" />
-                <element signature="e#8290#8542#0" expanded="false" />
-                <element signature="e#8591#9454#0" expanded="false" />
-                <element signature="e#10544#10679#0" expanded="false" />
-                <element signature="e#10714#10977#0" expanded="false" />
+                <element signature="e#2975#3413#0" expanded="false" />
+                <element signature="e#3479#3582#0" expanded="false" />
+                <element signature="e#3658#3970#0" expanded="false" />
+                <element signature="e#4064#4407#0" expanded="false" />
+                <element signature="e#4475#4840#0" expanded="false" />
+                <element signature="e#4915#5708#0" expanded="false" />
+                <element signature="e#5760#6038#0" expanded="false" />
+                <element signature="e#6108#6376#0" expanded="false" />
+                <element signature="e#6428#8005#0" expanded="false" />
+                <element signature="e#8032#8446#0" expanded="false" />
+                <element signature="e#8476#8728#0" expanded="false" />
+                <element signature="e#8777#9640#0" expanded="false" />
+                <element signature="e#10730#10865#0" expanded="false" />
+                <element signature="e#10900#11163#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -525,7 +526,7 @@
       <workItem from="1510944950901" duration="4192000" />
       <workItem from="1510985702682" duration="19169000" />
       <workItem from="1511067559572" duration="25296000" />
-      <workItem from="1511160109796" duration="18666000" />
+      <workItem from="1511160109796" duration="19987000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -674,11 +675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511188702443</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2nd test Deployment!">
+      <created>1511189609488</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1511189609488</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167881000" />
+    <option name="totallyTimeSpent" value="169202000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,6 +699,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -702,7 +711,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24854574" sideWeight="0.5045558" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32154697" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32154697" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25856355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1164,23 +1173,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includs/func.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+        <state relative-caret-position="341">
+          <caret line="81" column="45" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
           <folding>
-            <element signature="e#2789#3227#0" expanded="false" />
-            <element signature="e#3293#3396#0" expanded="false" />
-            <element signature="e#3472#3784#0" expanded="false" />
-            <element signature="e#3878#4221#0" expanded="false" />
-            <element signature="e#4289#4654#0" expanded="false" />
-            <element signature="e#4729#5522#0" expanded="false" />
-            <element signature="e#5574#5852#0" expanded="false" />
-            <element signature="e#5922#6190#0" expanded="false" />
-            <element signature="e#6242#7819#0" expanded="false" />
-            <element signature="e#7846#8260#0" expanded="false" />
-            <element signature="e#8290#8542#0" expanded="false" />
-            <element signature="e#8591#9454#0" expanded="false" />
-            <element signature="e#10544#10679#0" expanded="false" />
-            <element signature="e#10714#10977#0" expanded="false" />
+            <element signature="e#2975#3413#0" expanded="false" />
+            <element signature="e#3479#3582#0" expanded="false" />
+            <element signature="e#3658#3970#0" expanded="false" />
+            <element signature="e#4064#4407#0" expanded="false" />
+            <element signature="e#4475#4840#0" expanded="false" />
+            <element signature="e#4915#5708#0" expanded="false" />
+            <element signature="e#5760#6038#0" expanded="false" />
+            <element signature="e#6108#6376#0" expanded="false" />
+            <element signature="e#6428#8005#0" expanded="false" />
+            <element signature="e#8032#8446#0" expanded="false" />
+            <element signature="e#8476#8728#0" expanded="false" />
+            <element signature="e#8777#9640#0" expanded="false" />
+            <element signature="e#10730#10865#0" expanded="false" />
+            <element signature="e#10900#11163#0" expanded="false" />
           </folding>
         </state>
       </provider>

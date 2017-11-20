@@ -32,9 +32,9 @@ const le = require('greenlock').create({
     configDir: 'certs/etc',
     approveDomains: (opts, certs, cb) => {
         if (certs) {
-            opts.domains = ['tkc4you.com', 'www.tkc4you.com']
+            opts.domains = ['missionbillionaire.in', 'www.missionbillionaire.in']
         } else {
-            opts.email = 'tkc4you@gmail.com',
+            opts.email = 'prosubhamdas1998@gmail.com',
                 opts.agreeTos = true;
         }
         cb(null, {
@@ -136,14 +136,14 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(80, () => {
-    console.log("Running The Server");
+// app.listen(80, () => {
+//     console.log("Running The Server");
+// });
+
+http.createServer(le.middleware(redirectHttps())).listen(80, function() {
+  console.log("Server Running On http" + 80);
 });
 
-// http.createServer(le.middleware(redirectHttps())).listen(80, function() {
-//   console.log("Server Running On http" + 80);
-// })
-//
-// https.createServer(le.httpsOptions, le.middleware(app)).listen(443, function() {
-//   console.log("Server Running On https" + 443);
-// })
+https.createServer(le.httpsOptions, le.middleware(app)).listen(443, function() {
+  console.log("Server Running On https" + 443);
+});

@@ -7,7 +7,7 @@ const sessionStore = new MongoStore({ mongooseConnection: mongoose.connection })
 let config = {};
 config.site = {
     protocol: "https://",
-    siteUrl: "missionbillinoure.in"
+    siteUrl: "missionbillionaire.in"
 };
 
 // Session Configuration.
@@ -21,13 +21,13 @@ config.sessions = {
 
 // database configuration
 config.database = {
-    connect: "mongodb://localhost/tkc",
+    connect: "mongodb://localhost/mb",
 };
 
 // Google RECaptcha Configuration.
 config.recaptcha = {
-    secret: "6Lcz3ikUAAAAAEruySQzyO2AvBjaPhSiWDSQtKnC",
-    siteKey: "6Lcz3ikUAAAAAPWKCJorBvf8VvXjaDUUf2dBWkdC"
+    secret: "6LdeozkUAAAAAG4hLygmUitRl4xKGOIl2fjR7y31",
+    siteKey: "6LdeozkUAAAAAIYUVCOtThSZV8cX2jzQ_jfRGOMG"
 };
 
 // BruteForce Module.
@@ -52,7 +52,7 @@ config.mailer = {
     secure: true, // secure:true for port 465, secure:false for port 587
     auth: {
         user: 'noreply@tkc4you.com',
-        pass: 'RJaTse5r'
+        pass: 'noreply'
     },
     tls: {
         // do not fail on invalid certs

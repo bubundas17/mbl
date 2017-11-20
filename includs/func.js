@@ -58,22 +58,29 @@ func.doRefCredit = (userc) => {
             .then(us => {
                 us.credits += credit;
                 us.save( err =>{
-                    tasks.push(ReferialincomeBD.create({
+                    ReferialincomeBD.create({
                         user: us._id,
                         refUser: userc._id,
                         level: (index + 1),
                         description: "Activation of a user on level " + (index + 1),
                         amount: credit
-                    }))
+                    })
                 });
             })
     });
+
+    tasks.push(new Promise((resolve, reject) => {
+        setTimeout(resolve, 30000, 'Delayed');
+    }));
+
     Promise.all(tasks)
         .then( users => {
             if (! userc.referedBy.equals(userc.upTree[0])) {
                 userDB.findById(userc.referedBy)
                     .then(us => {
-                        us.credits += 100;
+                        let credits = us.credits;
+                        credits += 100;
+                        us.credits = credits;
                         us.save( err => {
                             if(err){
                                 return console.log(err)
@@ -95,7 +102,6 @@ func.doRefCredit = (userc) => {
         .catch( err => {
             console.log(err)
         })
-
 };
 
 // Make Email Address Show Parthia.

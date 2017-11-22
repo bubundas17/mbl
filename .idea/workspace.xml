@@ -4,10 +4,6 @@
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routs/auth.js" afterPath="$PROJECT_DIR$/routs/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" afterPath="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inc/usercpsider.ejs" afterPath="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="793">
               <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="141" column="6" lean-forward="true" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -191,11 +197,11 @@
         <option value="$PROJECT_DIR$/views/clientarea/referrals/index.ejs" />
         <option value="$PROJECT_DIR$/views/inc/sider.ejs" />
         <option value="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/includs/func.js" />
         <option value="$PROJECT_DIR$/routs/auth.js" />
         <option value="$PROJECT_DIR$/views/clientarea/referrals/treeview.ejs" />
         <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -398,7 +404,7 @@
       <workItem from="1511160109796" duration="27397000" />
       <workItem from="1511272096502" duration="3935000" />
       <workItem from="1511289503330" duration="1188000" />
-      <workItem from="1511336131049" duration="5141000" />
+      <workItem from="1511336131049" duration="5239000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -596,11 +602,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511276061915</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Final Deployment 3, Level Distribution fixed!">
+      <created>1511345650928</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1511345650929</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186876000" />
+    <option name="totallyTimeSpent" value="186974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,6 +626,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -624,7 +638,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24854574" sideWeight="0.5045558" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13259669" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13259669" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25856355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -664,7 +678,8 @@
     <MESSAGE value="2nd test Deployment!" />
     <MESSAGE value="Final Deployment" />
     <MESSAGE value="Final Deployment 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Deployment 2" />
+    <MESSAGE value="Final Deployment 3, Level Distribution fixed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Deployment 3, Level Distribution fixed!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -918,14 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="141" column="3" lean-forward="true" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includs/middlewares.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="941">
@@ -1076,6 +1083,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="793">
           <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="141" column="6" lean-forward="true" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
           <folding />
         </state>
       </provider>

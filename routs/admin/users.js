@@ -20,7 +20,7 @@ router.get('/', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, res) => {
     }, {
         page: req.query.page || 1,
         limit: userListPerPage,
-        sort:     { _id: -1 }
+        sort: {_id: -1}
     })
         .then((users) => {
             res.render("admin/users/userlist.ejs", {users: users});
@@ -47,7 +47,7 @@ router.get('/active', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, res) =>
     }, {
         page: req.query.page || 1,
         limit: userListPerPage,
-        sort:     { _id: -1 }
+        sort: {_id: -1}
     })
         .then((users) => {
             res.render("admin/users/activeUser.ejs", {users: users});
@@ -89,19 +89,19 @@ router.post('/:id/active', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, re
     // console.log(req.body)
     userDB.findById(req.params.id)
         .then(user => {
-            if(req.body.status === "active"){
-                user.isActive = true
+            if (user.isActive) {
+                req.flash('error', 'User Is Already Activated!');
+                return res.redirect('back');
             }
-            if(req.body.refcredit === "ok" ){
-                func.doRefCredit(user);
-            }
-            user.save( e => {
-                if(e){
+            user.isActive = true
+            func.doRefCredit(user);
+            user.save(e => {
+                if (e) {
                     req.flash('error', 'Something Is Wants Wrong! Please Contact To Administrator.');
                     return res.redirect('back');
                 }
                 req.flash('success', 'User Activated!');
-                return res.redirect('back');
+                return res.redirect('/admin/users/active');
             })
         })
         .catch(err => {

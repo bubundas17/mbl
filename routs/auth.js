@@ -234,12 +234,12 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
     let name = req.body.name;
     let email = req.body.email;
     let phone = req.body.phone;
-    let referedby = req.body.referedby;
+    let referedby = req.body.referedby;  // getting sponser id as input
     let btc = req.body.btc;
     let zebpay = req.body.zebpay;
 
 
-    // Password Encryption Logic
+    // Password Hashing Logic
     let salt = func.createSalt();
     let hash = func.password(password, salt);
 
@@ -272,14 +272,11 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                                 salt: salt,
                                 bitcoin: btc// Storing Salt for later password generation posses.
                             })
-                                .then(user => {
-                                    let upTree = downUser.upTree;
-                                    upTree.unshift(downUser._id);
-                                    upTree.splice(10, downUser.upTree.length);
-                                    user.upTree = upTree;
+                                .then(Newuser => {
+                                    Newuser.upTree = func.addToTree(downUser.upTree, downUser._id);
                                     downUser.totalReferred += 1;
                                     downUser.save();
-                                    user.save();
+                                    Newuser.save();
                                     req.flash('info', 'Sign Up Done. Welcome to our fatally');
                                     res.redirect('/');
                                 })
@@ -314,6 +311,9 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                     return res.redirect('/signup');
                 });
         }
+    } else {
+        req.flash('error', 'Please Fill The Form Correctly.');
+        return res.redirect('/signup');
     }
 });
 

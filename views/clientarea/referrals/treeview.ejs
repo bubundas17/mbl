@@ -1,10 +1,13 @@
 <% include ../../inc/usercpHead %>
 <% include ../../inc/usercpsider.ejs %>
 <div class="list-group">
+    <div class="list-group-item active">
+        <h3>Current Level: <%= req.query.level ? req.query.level : 1 %></h3>
+    </div>
     <div class="list-group-item">
         <form class="form-inline" action="" method="get">
             <div class="form-gtoup">
-                <label for="Search">Select Level:</label>
+                <label for="Search">GoTo Level:</label>
                 <select name="level" id="" class="form-control">
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>

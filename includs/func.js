@@ -395,4 +395,13 @@ func.getWidId = (obj, method)=> {
     }
 
 };
+
+func.addToTree = (tree, newId) => {
+    const oldArr = tree;
+    let newArr = [];
+    newArr.push(newId);
+    let finalArr = newArr.concat(oldArr);
+    finalArr.slice(10, finalArr.length);
+    return finalArr;
+};
 module.exports = func;

@@ -6,9 +6,16 @@
     </div>
     <div class="panel-body">
         <div class="list-group">
+            <div class="list-group-item active">User Info:</div>
+            <div class="list-group-item">Username: <%= user.username %></div>
+            <div class="list-group-item">Name: <%= user.name %></div>
+            <div class="list-group-item">Email: <%= user.meta.email %></div>
+            <div class="list-group-item">Phone: <%= user.meta.phone %></div>
+        </div>
+        <div class="list-group">
             <div class="list-group-item">
                 <form class="form-inline" action="/admin/users/<%= user._id %>/active" method="POST">
-                    <button name="button" class="btn btn-success">Save</button>
+                    <button name="button" class="btn btn-success">Active!</button>
                     <a href="/admin/users/active" class="btn btn-info">Go Back</a>
                 </form>
             </div>

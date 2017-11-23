@@ -25,6 +25,7 @@ const postSchema = new mongoose.Schema({
         phone: {type: Number, required: true},
         dateOfBarth: String,
         zebpay: {type: Number},
+        paytm: {type: Number},
         joiningDate: {type: Date, default: Date.now} // The Date The user joined to this site.
     },
     bitcoin: {type: String}, // Bitcoin Wallet Address.

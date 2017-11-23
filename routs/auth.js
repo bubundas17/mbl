@@ -237,6 +237,7 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
     let referedby = req.body.referedby;  // getting sponser id as input
     let btc = req.body.btc;
     let zebpay = req.body.zebpay;
+    let paytm = req.body.paytm
 
 
     // Password Hashing Logic
@@ -265,7 +266,8 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                                 meta: {
                                     email: email,
                                     phone: phone,
-                                    zebpay: zebpay
+                                    zebpay: zebpay,
+                                    paytm: paytm
                                 },
                                 referedBy: refUser._id,
                                 password: hash, // Storing Hashed password instead of actual password.
@@ -297,6 +299,8 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                 meta: {
                     email: email,
                     phone: phone,
+                    zebpay: zebpay,
+                    paytm: paytm
                 },
                 password: hash, // Storing Hashed password instead of actual password.
                 salt: salt,

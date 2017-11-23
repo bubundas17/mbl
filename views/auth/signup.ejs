@@ -31,7 +31,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="/"><b>Mission Millinoure</b></a>
+        <a href="/"><b>Mission Billionaire</b></a>
     </div>
     <% if (messages.success) { %>
     <div class="alert alert-success">
@@ -66,36 +66,41 @@
                 <span class="fa fa-bullhorn form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Full name" name="name">
+                <input type="text" class="form-control" placeholder="Full name" name="name" required>
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Choose username" name="username">
+                <input type="text" class="form-control" placeholder="Choose username" name="username" pattern="[a-z0-9]{6,18}" required>
                 <i class="fa fa-user-circle-o form-control-feedback" aria-hidden="true"></i>
+                <small>[a-z0-9] MIN 6.</small>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password">
+                <input type="password" class="form-control" placeholder="Retype password" required>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 <!-- <small>You Might Not Chenge Your Email Later.</small> -->
             </div>
             <div class="form-group has-feedback">
-                <input type="number" class="form-control" placeholder="Phone Number" name="phone">
+                <input type="number" class="form-control" placeholder="Phone Number" name="phone" required>
                 <i class="fa fa-phone form-control-feedback" aria-hidden="true"></i>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Bitcoin Wallet Address" name="btc">
+                <input type="text" class="form-control" placeholder="BitCoin Wallet Address" name="btc">
                 <i class="fa fa-btc form-control-feedback" aria-hidden="true"></i>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="zebPay Phone Number" name="zebpay">
+                <input type="text" class="form-control" placeholder="ZebPay Phone Number (Optional)" name="zebpay">
+                <i class="fa fa-id-card-o form-control-feedback" aria-hidden="true"></i>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="PayTm Phone Number (Optional)" name="paytm">
                 <i class="fa fa-id-card-o form-control-feedback" aria-hidden="true"></i>
             </div>
             <div class="form-group has-feedback">

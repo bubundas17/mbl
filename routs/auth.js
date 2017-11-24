@@ -237,7 +237,7 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
     let referedby = req.body.referedby;  // getting sponser id as input
     let btc = req.body.btc;
     let zebpay = req.body.zebpay;
-    let paytm = req.body.paytm
+    let paytm = req.body.paytm;
 
 
     // Password Hashing Logic
@@ -293,27 +293,29 @@ router.post('/signup', middlewares.ifNotLoggedIn, middlewares.checkCaptha, (req,
                     return res.redirect('/signup');
                 });
         } else {
-            userDB.create({
-                name: name,
-                username: username,
-                meta: {
-                    email: email,
-                    phone: phone,
-                    zebpay: zebpay,
-                    paytm: paytm
-                },
-                password: hash, // Storing Hashed password instead of actual password.
-                salt: salt,
-                bitcoin: btc// Storing Salt for later password generation posses.
-            })
-                .then(user => {
-                    req.flash('info', 'Sign Up Done. Welcome to our fatally');
-                    res.redirect('/');
-                })
-                .catch(err => {
-                    req.flash('error', 'No User found with the referral id you entered!');
-                    return res.redirect('/signup');
-                });
+            req.flash('error', 'No User found with the referral id you entered!');
+            return res.redirect('/signup');
+            // userDB.create({
+            //     name: name,
+            //     username: username,
+            //     meta: {
+            //         email: email,
+            //         phone: phone,
+            //         zebpay: zebpay,
+            //         paytm: paytm
+            //     },
+            //     password: hash, // Storing Hashed password instead of actual password.
+            //     salt: salt,
+            //     bitcoin: btc// Storing Salt for later password generation posses.
+            // })
+            //     .then(user => {
+            //         req.flash('info', 'Sign Up Done. Welcome to our fatally');
+            //         res.redirect('/');
+            //     })
+            //     .catch(err => {
+            //         req.flash('error', 'No User found with the referral id you entered!');
+            //         return res.redirect('/signup');
+            //     });
         }
     } else {
         req.flash('error', 'Please Fill The Form Correctly.');

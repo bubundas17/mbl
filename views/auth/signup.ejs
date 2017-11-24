@@ -62,8 +62,9 @@
 
         <form action="/signup" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Sponser ID" name="referedby" value="<%= req.query.ref || "" %>" <% if( req.query.ref){%> disabled <%}%>>
+                <input type="text" class="form-control" placeholder="Sponser ID" name="referedby" value="<%= req.query.ref || "" %>" <% if( req.query.ref){%> disabled <%}%> required>
                 <span class="fa fa-bullhorn form-control-feedback"></span>
+                <small>If You don't have any sponsor id, Please Put <b>admin</b></small>
             </div>
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="Full name" name="name" required>

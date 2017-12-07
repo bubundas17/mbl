@@ -31,10 +31,11 @@ const postSchema = new mongoose.Schema({
     bitcoin: {type: String}, // Bitcoin Wallet Address.
     totalReferred: {type: Number, default: 0},    // Maximum 2
     upTree: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}], // Last 10 Users Above him.["Ram", "bubun", "subham", "bubundas17@gmail.com"] etc...
-    referedBy: {type: mongoose.Schema.Types.ObjectId, ref: "User", required:true},   // Name of the user who referred.
+    referedBy: {type: mongoose.Schema.Types.ObjectId, ref: "User"},   // Name of the user who referred.
     credits: {type: Number, default: 0},
     isAdmin: {type: Boolean, default: false},
     isActive: {type: Boolean, default: false},
+    isBanned: {type: Boolean, default: false}
 });
 
 postSchema.plugin(mongoosePaginate);

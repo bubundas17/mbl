@@ -9,6 +9,8 @@ const statementRoutes = require('./statement');
 const ticketsRoutes = require('./tickets.js');
 const referralRouts = require('./referral.js');
 const withdrawalRouts = require('./withdrawal');
+const activateRoutes = require('./activate');
+router.use(middlewares.ifBanned);
 
 router.get('/', middlewares.ifLoggedIn, function (req, res) {
     Promise.all([
@@ -25,5 +27,6 @@ router.use('/statement', statementRoutes);
 router.use('/tickets', ticketsRoutes);
 router.use('/referral', referralRouts);
 router.use('/withdrawal', withdrawalRouts);
+router.use('/activate', activateRoutes);
 
 module.exports = router;

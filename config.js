@@ -25,9 +25,14 @@ config.database = {
 };
 
 // Google RECaptcha Configuration.
+// config.recaptcha = {
+//     secret: "6LdeozkUAAAAAG4hLygmUitRl4xKGOIl2fjR7y31",
+//     siteKey: "6LdeozkUAAAAAIYUVCOtThSZV8cX2jzQ_jfRGOMG"
+// };
+
 config.recaptcha = {
-    secret: "6LdeozkUAAAAAG4hLygmUitRl4xKGOIl2fjR7y31",
-    siteKey: "6LdeozkUAAAAAIYUVCOtThSZV8cX2jzQ_jfRGOMG"
+    secret: "6Lcz3ikUAAAAAEruySQzyO2AvBjaPhSiWDSQtKnC",
+    siteKey: "6Lcz3ikUAAAAAPWKCJorBvf8VvXjaDUUf2dBWkdC"
 };
 
 // BruteForce Module.

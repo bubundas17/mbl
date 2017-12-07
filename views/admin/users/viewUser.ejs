@@ -8,7 +8,7 @@
         <h3>User Information</h3>
         <div class="list-group-item">
             <div class="form-group">
-                <strong>User Name:</strong> <%= user.name %>
+                <strong>User Name: <%= user.name %> (<%= user.isBanned ? "Banned" : "Active"%>)</strong>
             </div>
             <div class="form-group">
                 <strong>Username:</strong> <%= user.username %>
@@ -44,6 +44,24 @@
                 <button class="btn btn-success">Recharge!</button>
             </form>
         </div>
+        <div class="list-group-item">
+            <form class="" action="/admin/users/<%= user._id %>?_method=put&type=banning" method="post">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label"> Select User State</label>
+                    <div class="col-sm-10">
+                        <select name="state">
+                            <option value="banned">Banned</option>
+                            <option value="active">Active</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-success">Save</button>
+            </form>
+        </div>
+        <hr>
+        <button name="button" class="btn btn-success">Save</button>
+        <a href="/admin/users/<%= user._id %>" class="btn btn-info">Go Back</a>
+    </div>
     </div>
 </div>
 <% include ../../inc/footer %>

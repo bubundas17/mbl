@@ -131,7 +131,9 @@ func.censorEmail = function (email) {
     let arr = email.split("@");
     return this.censorWord(arr[0]) + "@" + this.censorWord(arr[1]);
 };
-
+func.censorWord = function (str) {
+    return str[0] + "*".repeat(str.length - 4) + str.slice(-4);
+};
 
 // Generating Password Reset Link.
 func.makeReset = (user, callback) => {

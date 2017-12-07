@@ -77,12 +77,12 @@ router.post("/:id", middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => 
     .populate('service')
     .populate('message.user')
     .exec(function(err, found) {
-      if (found.user.toString() != req.user._id.toString()) {
-        req.flash('error', 'Somthing is wents wrong. Please Contact To System Admin.')
+      if (found.user.toString() !== req.user._id.toString()) {
+        req.flash('error', 'Something is wants wrong. Please Contact To System Admin.');
         return res.redirect("back");
       }
       if (err) {
-        req.flash('error', 'Somthing is wents wrong. Please Contact To System Admin.')
+        req.flash('error', 'Something is wants wrong. Please Contact To System Admin.');
         res.redirect("back");
       }
       found.message.push({
@@ -91,11 +91,11 @@ router.post("/:id", middlewares.ifLoggedIn, middlewares.ifActive, (req, res) => 
       })
       found.save(arr => {
         if (err) {
-          req.flash('error', 'Somthing is wents wrong. Please Contact To System Admin.')
+          req.flash('error', 'Something is wants wrong. Please Contact To System Admin.');
           return res.redirect("back");
         }
       })
-      req.flash('success', 'Submited!')
+      req.flash('success', 'Submitted!');
       return res.redirect("back");
     })
 })
@@ -116,14 +116,14 @@ router.post("/", middlewares.ifLoggedIn,  middlewares.ifActive,  (req, res) => {
     }, (err, ok) => {
       if (err) {
         console.log(err);
-        req.flash('error', 'Somthing Is Wents Wrong In Processing Your Request. Please retry.')
+        req.flash('error', 'Something Is Wants Wrong In Processing Your Request. Please retry.');
         return res.redirect('back')
       }
-      req.flash('success', 'Your Ticket has been submited. One of our executives will reply you soon.')
+      req.flash('success', 'Your Ticket has been submitted. One of our executives will reply you soon.');
       res.redirect('back');
     })
   }
-})
+});
 
 
 

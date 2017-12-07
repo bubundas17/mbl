@@ -22,14 +22,22 @@ func.ifActive = (req, res, next) => {
   res.redirect('back')
 };
 
+func.ifBanned = (req, res, next) => {
+  if (! req.user.isBanned) {
+    return next()
+  }
+  req.flash('info', 'Sorry But Your Account has been Banned! Please contact to support.');
+  res.redirect('back')
+};
+
 func.ifNotActive = (req, res, next) => {
   if (req.user.isActive) {
-    req.flash('info', 'Your account is Already Active!.')
+    req.flash('info', 'Your account is Already Active!.');
     return res.redirect('/clientarea/active')
 
   }
   next()
-}
+};
 
 func.ifNotLoggedIn = function(req, res, next) {
   if (!req.user) {
@@ -38,7 +46,7 @@ func.ifNotLoggedIn = function(req, res, next) {
     req.flash('info', 'No Need. You Are Already Logged In!!!')
     res.redirect('back');
   }
-}
+};
 
 func.ifLoggedIn = function(req, res, next) {
   var reff = fun.refName(req);
@@ -52,7 +60,7 @@ func.ifLoggedIn = function(req, res, next) {
       res.redirect('/login');
     }
   }
-}
+};
 
 func.hasService = function(req, res, next) {
   servicesDB.findById(req.params.id, function(err, ok) {
@@ -66,7 +74,7 @@ func.hasService = function(req, res, next) {
       res.redirect('back');
     }
   })
-}
+};
 
 
 func.ifAdmin = function(req, res, next) {
@@ -76,7 +84,7 @@ func.ifAdmin = function(req, res, next) {
     req.flash('error', 'You Are Not Authorised To Do So.');
     res.redirect('back');
   }
-}
+};
 
 func.bruteForcePrevent = bruteforce.prevent;
 
@@ -100,6 +108,6 @@ func.checkCaptha = function(req, res, next) {
       res.redirect('back');
     }
   });
-}
+};
 
 module.exports = func;

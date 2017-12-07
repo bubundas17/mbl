@@ -158,6 +158,21 @@ router.put('/:id', middlewares.ifLoggedIn, middlewares.ifAdmin, (req, res) => {
                     });
                     break;
 
+                case "banning":
+                    if( req.body.state == "banned" )  user.isBanned = true;
+                    if( req.body.state == "active" )  user.isBanned = false;
+                    user.save(function (err) {
+                        if (err) {
+                            console.log(err)
+                            req.flash('error', 'Upps! Something Wants Wrong. Please Contact To Administrator');
+                            res.redirect('back');
+                        } else {
+                            req.flash('success', 'Saved');
+                            res.redirect('back');
+                        }
+                    });
+                    break;
+
 
             }
 

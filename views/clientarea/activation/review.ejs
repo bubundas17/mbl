@@ -1,0 +1,35 @@
+<% include ../../inc/usercpHead %>
+<% include ../../inc/usercpsider.ejs %>
+<div class="container-fluid">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Activate User Account Using Credits</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <div class="box-body">
+            <div class="list-group">
+                <div class="list-group-item active">Review Account: </div>
+                <div class="list-group-item"><strong>Username: <%= actuser.username %></strong></div>
+                <div class="list-group-item"><strong>Name: <%= actuser.name %></strong></div>
+                <div class="list-group-item"><strong>Email: <%= func.censorEmail(actuser.meta.email) %></strong></div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="list-group">
+                <div class="list-group-item active">Review Charges: </div>
+                <div class="list-group-item"><strong>Activation Charges: 800 INR</strong></div>
+                <div class="list-group-item"><strong>Fees: 0 INR (0%)</strong></div>
+                <div class="list-group-item"><strong>Total: 800 INR</strong></div>
+                <div class="list-group-item"><strong>Remaining Balance: <%= req.user.credits - 800 %> INR</strong></div>
+            </div>
+            <div class="box-footer">
+                <form action="" method="post">
+                    <input type="hidden" name="username" value="<%= req.body.username %>">
+                    <input type="hidden" name="confirm" value="ok">
+                    <button type="submit" class="btn btn-info">Active</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <% include ../../inc/footer %>

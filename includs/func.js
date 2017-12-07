@@ -406,4 +406,12 @@ func.addToTree = (tree, newId) => {
     finalArr.slice(10, finalArr.length);
     return finalArr;
 };
+
+func.objtoQuery = function (obj) {
+
+    let esc = encodeURIComponent;
+    return Object.keys(obj)
+        .map(k => esc(k) + '=' + esc(obj[k]))
+        .join('&');
+};
 module.exports = func;

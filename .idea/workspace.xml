@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d5eed35-a770-45c4-a015-f070eb88db10" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/routs/clientarea/activate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/clientarea/activation/review.ejs" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Bubun_Das.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Bubun_Das.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
       <change beforePath="$PROJECT_DIR$/includs/func.js" afterPath="$PROJECT_DIR$/includs/func.js" />
-      <change beforePath="$PROJECT_DIR$/includs/middlewares.js" afterPath="$PROJECT_DIR$/includs/middlewares.js" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change beforePath="$PROJECT_DIR$/routs/admin/users.js" afterPath="$PROJECT_DIR$/routs/admin/users.js" />
-      <change beforePath="$PROJECT_DIR$/routs/clientarea/index.js" afterPath="$PROJECT_DIR$/routs/clientarea/index.js" />
-      <change beforePath="$PROJECT_DIR$/routs/clientarea/statement.js" afterPath="$PROJECT_DIR$/routs/clientarea/statement.js" />
-      <change beforePath="$PROJECT_DIR$/routs/clientarea/tickets.js" afterPath="$PROJECT_DIR$/routs/clientarea/tickets.js" />
-      <change beforePath="$PROJECT_DIR$/views/admin/users/editUser.ejs" afterPath="$PROJECT_DIR$/views/admin/users/editUser.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/admin/users/viewUser.ejs" afterPath="$PROJECT_DIR$/views/admin/users/viewUser.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/auth/signup.ejs" afterPath="$PROJECT_DIR$/views/auth/signup.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/clientarea/activation/activate.ejs" afterPath="$PROJECT_DIR$/views/clientarea/activation/activate.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/inc/usercpsider.ejs" afterPath="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="func.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="func.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includs/func.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="603">
+              <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
               <folding>
                 <element signature="e#511#3098#0" expanded="false" />
                 <element signature="e#3163#3601#0" expanded="false" />
@@ -118,16 +103,17 @@
                 <element signature="e#11019#11154#0" expanded="false" />
                 <element signature="e#11189#11452#0" expanded="false" />
                 <element signature="e#11489#11666#0" expanded="false" />
+                <element signature="e#11702#11834#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usercpsider.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="usercpsider.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="60" column="115" lean-forward="false" selection-start-line="60" selection-start-column="115" selection-end-line="60" selection-end-column="115" />
+            <state relative-caret-position="345">
+              <caret line="54" column="110" lean-forward="true" selection-start-line="54" selection-start-column="110" selection-end-line="54" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -321,11 +307,11 @@
         <option value="$PROJECT_DIR$/views/admin/users/viewUser.ejs" />
         <option value="$PROJECT_DIR$/includs/middlewares.js" />
         <option value="$PROJECT_DIR$/views/clientarea/activation/activate.ejs" />
-        <option value="$PROJECT_DIR$/includs/func.js" />
         <option value="$PROJECT_DIR$/views/clientarea/activation/review.ejs" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/routs/clientarea/activate.js" />
         <option value="$PROJECT_DIR$/views/inc/usercpsider.ejs" />
+        <option value="$PROJECT_DIR$/includs/func.js" />
       </list>
     </option>
   </component>
@@ -565,7 +551,7 @@
       <workItem from="1512584065960" duration="624000" />
       <workItem from="1512670644503" duration="135000" />
       <workItem from="1512670992487" duration="21000" />
-      <workItem from="1512671050098" duration="1406000" />
+      <workItem from="1512671050098" duration="2286000" />
     </task>
     <task id="LOCAL-00001" summary="Signup Error solved">
       <created>1510332459754</created>
@@ -833,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511975806263</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Updated!">
+      <created>1512672588945</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1512672588945</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229466000" />
+    <option name="totallyTimeSpent" value="230346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1310,10 +1303,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="54" column="110" lean-forward="true" selection-start-line="54" selection-start-column="110" selection-end-line="54" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includs/func.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="603">
+          <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
           <folding>
             <element signature="e#511#3098#0" expanded="false" />
             <element signature="e#3163#3601#0" expanded="false" />
@@ -1331,15 +1332,8 @@
             <element signature="e#11019#11154#0" expanded="false" />
             <element signature="e#11189#11452#0" expanded="false" />
             <element signature="e#11489#11666#0" expanded="false" />
+            <element signature="e#11702#11834#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/inc/usercpsider.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="60" column="115" lean-forward="false" selection-start-line="60" selection-start-column="115" selection-end-line="60" selection-end-column="115" />
-          <folding />
         </state>
       </provider>
     </entry>
